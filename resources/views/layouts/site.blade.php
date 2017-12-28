@@ -25,6 +25,8 @@
         @yield('content')
     </div>
 
+    @include('layouts._site._footer')
+
     <!-- Scripts -->
     <script src="{{ asset('lib/jquery/dist/jquery.min.js') }}"></script>
     <script src="{{ asset('lib/materialize/dist/js/materialize.min.js') }}"></script>
