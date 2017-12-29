@@ -16,14 +16,14 @@
     <link href="{{ asset('lib/materialize/dist/css/materialize.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <header>
-        	@include('layouts._site._nav')
-        </header>
+<body id="app">
+    <header>
+    	@include('layouts._site._nav')
+    </header>
 
+    <main>
         @yield('content')
-    </div>
+    </main>
 
     @include('layouts._site._footer')
 

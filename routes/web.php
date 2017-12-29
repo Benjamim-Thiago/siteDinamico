@@ -17,7 +17,16 @@
 
 Route::get('/', function () {
     return view('site.home');
-});
+})->name('site.home');
+
+Route::get('about', function() {
+	return view('site.about');
+})->name('site.about');
+
+Route::get('contact', function() {
+	return view('site.contact');
+})->name('site.contact');
+
 
 Auth::routes();
 
