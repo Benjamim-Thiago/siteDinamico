@@ -27,6 +27,10 @@ Route::get('contact', function() {
 	return view('site.contact');
 })->name('site.contact');
 
+Route::get('immobile/{id}/{title?}', function() {
+	return view('site.immobile_detail');
+})->name('site.immobile');
+
 
 Auth::routes();
 
