@@ -15,6 +15,7 @@
     return view('welcome');
 });*/
 
+
 Route::get('/', function () {
     return view('site.home');
 })->name('site.home');
@@ -32,6 +33,11 @@ Route::get('immobile/{id}/{title?}', function() {
 })->name('site.immobile');
 
 
-Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::prefix('admin')->namespace('Admin')->group(function () {
+	Route::get('login', 'UserController@index')->name('admin.index');
+	Route::post('login', 'UserController@login')->name('admin.logged');
+});

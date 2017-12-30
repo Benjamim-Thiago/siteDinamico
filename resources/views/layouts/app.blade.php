@@ -16,25 +16,14 @@
     <link href="{{ asset('lib/materialize/dist/css/materialize.min.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
-<body>
-    <div id="app">
-        <nav>
-            <div class="nav-wrapper blue">
-                <div class="container">
-                  <a href="#!" class="brand-logo">Logo</a>
-                  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-                  <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
-                  </ul>
-                  <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#">Home</a></li>
-                  </ul>
-                </div>
-            </div>    
-        </nav>
-
+<body id="app">
+    @include('layouts._admin._nav')
+    
+    <main>
         @yield('content')
-    </div>
+    </main>
+
+    @include('layouts._admin._footer')
 
     <!-- Scripts -->
     <script src="{{ asset('lib/jquery/dist/jquery.min.js') }}"></script>
